@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {  Item } from '../item';
+import {  Matkul } from '../matkul';
 import { DataService } from '../data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
-  selector: 'app-form-todolist',
-  templateUrl: './form-todolist.component.html',
-  styleUrls: ['./form-todolist.component.scss']
+  selector: 'app-form-matkul',
+  templateUrl: './form-matkul.component.html',
+  styleUrls: ['./form-matkul.component.scss']
 })
-export class FormToDoListComponent implements OnInit {
-  item: Item = {
+export class FormMatkulComponent implements OnInit {
+  matkul: Matkul = {
     _id: '',
-    message: '',
-    time: '',
-    status: 'Undone',
+    nama:'',
+    dosen: '',
+    semester: '',
+    tahun: '',
   };
   id = null;
   error = false;
@@ -37,9 +38,9 @@ export class FormToDoListComponent implements OnInit {
       if (params.get('id')) {
         this.id = params.get('id');
 
-        this.ds.getItem(this.id).subscribe(
+        this.ds.getMatkul(this.id).subscribe(
           response => {
-            this.item = response as Item;
+            this.matkul = response as Matkul;
           },
           err => {
             console.log(err);
@@ -52,19 +53,19 @@ export class FormToDoListComponent implements OnInit {
     });
   }
 
-  postItem() {
-    this.ds.postItem(this.item).subscribe(response => {
+  postMatkul() {
+    this.ds.postMatkul(this.matkul).subscribe(response => {
       // tampilkan notifikasi
-      this.openSnackBar("To Do List Added", null)
+      this.openSnackBar("Mata Kuliah Added", null)
       this.router.navigate(['/first']);
     });
   }
 
-  deleteItem() {
-    this.ds.deleteItem(this.item).subscribe(
+  deleteMatkul() {
+    this.ds.deleteMatkul(this.matkul).subscribe(
       response => {
         // tampilkan notifikasi
-        this.openSnackBar("To Do List Deleted", null)
+        this.openSnackBar("Mata Kuliah Deleted", null)
         this.router.navigate(['/first']);
       },
       err => {
@@ -73,11 +74,11 @@ export class FormToDoListComponent implements OnInit {
     );
   }
 
-  updateItem() {
-    this.ds.updateItem(this.item).subscribe(
+  updateMatkul() {
+    this.ds.updateMatkul(this.matkul).subscribe(
       response => {
         // tampilkan notifikasi
-        this.openSnackBar("To Do List Updated", null)
+        this.openSnackBar("Mata Kuliah Updated", null)
         this.router.navigate(['/first']);
       },
       err => {

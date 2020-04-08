@@ -8,11 +8,10 @@ import { FirstComponent } from './first/first.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Page404Component } from './page404/page404.component';
-import { FormToDoListComponent } from './form-todolist/form-todolist.component';
+import { FormMatkulComponent } from './form-matkul/form-matkul.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
@@ -55,7 +54,7 @@ import { ShellComponent } from './shell/shell.component';
     HeaderComponent,
     FooterComponent,
     Page404Component,
-    FormToDoListComponent,
+    FormMatkulComponent,
     ShellComponent,
   ],
   imports: [

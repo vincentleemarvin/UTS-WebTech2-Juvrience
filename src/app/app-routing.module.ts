@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { ShellComponent } from './shell/shell.component';
-import { FormToDoListComponent } from './form-todolist/form-todolist.component';
+import { FormMatkulComponent } from './form-matkul/form-matkul.component';
 import { Page404Component } from './page404/page404.component';
 
 
@@ -22,12 +22,12 @@ const routes: Routes = [
         component: FirstComponent
       },
       {
-        path: 'item/:id',
-        component: FormToDoListComponent
+        path: 'matkul/:id',
+        component: FormMatkulComponent
       },
       {
-        path: 'todolist',
-        component: FormToDoListComponent
+        path: 'matkul',
+        component: FormMatkulComponent
       },
     ]
   },

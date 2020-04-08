@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Item } from '../item';
+import { Matkul } from '../matkul';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,9 +8,9 @@ import { DataService } from '../data.service';
   styleUrls: ['./first.component.scss']
 })
 export class FirstComponent implements OnInit {
-  items: Item[];
+  Matkuls: Matkul[];
   error:boolean;
-  displayedColumns: string[] = ['message', 'time', 'status'];
+  displayedColumns: string[] = ['nama', 'dosen', 'semester', 'tahun'];
                     
 
   constructor(
@@ -18,9 +18,9 @@ export class FirstComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ds.getItems().subscribe(
+    this.ds.getMatkuls().subscribe(
       response => {
-        this.items = response as Item[];
+        this.Matkuls = response as Matkul[];
       },
       err => {
         console.log(err);

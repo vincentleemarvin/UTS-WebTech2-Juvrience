@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormToDoListComponent } from './form-todolist.component';
+import { FormMatkulComponent } from './form-matkul.component';
 
 describe('FormToDoListComponent', () => {
-  let component: FormToDoListComponent;
-  let fixture: ComponentFixture<FormToDoListComponent>;
+  let component: FormMatkulComponent;
+  let fixture: ComponentFixture<FormMatkulComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormToDoListComponent ]
+      declarations: [ FormMatkulComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormToDoListComponent);
+    fixture = TestBed.createComponent(FormMatkulComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

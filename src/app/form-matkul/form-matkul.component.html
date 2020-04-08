@@ -1,0 +1,57 @@
+<div *ngIf="error">To Do List with ID {{ this.id }} is not available</div>
+
+<form>
+  <h1>Create To Do List</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Nama Mata Kuliah</mat-label>
+    <input matInput placeholder="Ketikkan Nama Matkul" name="nama" id="nama" [(ngModel)]="matkul.nama" />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Nama Dosen</mat-label>
+    <input matInput placeholder="Ketikkan Nama Dosen" name="dosen" id="dosen" [(ngModel)]="matkul.dosen" />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Pilih Semester</mat-label>
+    <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="matkul.semester">
+      <mat-option value="genap">
+        Genap
+      </mat-option>
+      <mat-option value="ganjil">
+        Ganjil
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Pilih Tahun Akademik</mat-label>
+    <mat-select matNativeControl name="tahun" id="tahun" [(ngModel)]="matkul.tahun">
+      <mat-option value="1">
+        2017-2018
+      </mat-option>
+      <mat-option value="2">
+        2018-2019
+      </mat-option>
+      <mat-option value="3">
+        2019-2020
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <div class="buttons">
+    <div *ngIf="update">
+      <button mat-raised-button color="warn" (click)="deleteMatkul()">
+        delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateMatkul()">
+        update
+      </button>
+    </div>
+    <div *ngIf="!update">
+      <button mat-raised-button (click)="postMatkul()" color="primary">
+        post
+      </button>
+    </div>
+  </div>
+</form>

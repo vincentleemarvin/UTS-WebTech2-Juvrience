@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "uts-wt2-juvrience"
+  "defaultProject": "uts-wt2-juvrience",
+  "cli": {
+    "analytics": "59527ce8-dd5b-4c84-a891-791b22bcb86f"
+  }
 }
