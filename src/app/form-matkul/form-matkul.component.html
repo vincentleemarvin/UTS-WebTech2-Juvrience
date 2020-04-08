@@ -1,7 +1,7 @@
 <div *ngIf="error">To Do List with ID {{ this.id }} is not available</div>
 
 <form>
-  <h1>Create To Do List</h1>
+  <h1>Tambah Mata Kuliah</h1>
   <mat-form-field appearance="outline">
     <mat-label>Nama Mata Kuliah</mat-label>
     <input matInput placeholder="Ketikkan Nama Matkul" name="nama" id="nama" [(ngModel)]="matkul.nama" />
@@ -27,13 +27,13 @@
   <mat-form-field>
     <mat-label>Pilih Tahun Akademik</mat-label>
     <mat-select matNativeControl name="tahun" id="tahun" [(ngModel)]="matkul.tahun">
-      <mat-option value="1">
+      <mat-option value="2017-2018">
         2017-2018
       </mat-option>
-      <mat-option value="2">
+      <mat-option value="2018-2019">
         2018-2019
       </mat-option>
-      <mat-option value="3">
+      <mat-option value="2019-2020">
         2019-2020
       </mat-option>
     </mat-select>

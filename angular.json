@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "uts-wt2-juvrience": {
+    "uts-wt2-vincent": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/uts-wt2-juvrience",
+            "outputPath": "dist/uts-wt2-vincent",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "uts-wt2-juvrience:build"
+            "browserTarget": "uts-wt2-vincent:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "uts-wt2-juvrience:build:production"
+              "browserTarget": "uts-wt2-vincent:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "uts-wt2-juvrience:build"
+            "browserTarget": "uts-wt2-vincent:build"
           }
         },
         "test": {
@@ -116,18 +116,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "uts-wt2-juvrience:serve"
+            "devServerTarget": "uts-wt2-vincent:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "uts-wt2-juvrience:serve:production"
+              "devServerTarget": "uts-wt2-vincent:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "uts-wt2-juvrience",
+  "defaultProject": "uts-wt2-vincent",
   "cli": {
     "analytics": "59527ce8-dd5b-4c84-a891-791b22bcb86f"
   }

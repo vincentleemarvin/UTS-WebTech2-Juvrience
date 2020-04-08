@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'uts-wt2-juvrience'`, () => {
+  it(`should have as title 'uts-wt2-vincent'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('uts-wt2-juvrience');
+    expect(app.title).toEqual('uts-wt2-vincent');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('uts-wt2-juvrience app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('uts-wt2-vincent app is running!');
   });
 });
